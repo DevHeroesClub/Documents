@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt]{article}
 \usepackage[a4paper]{geometry}
 \pagestyle{empty}
 \usepackage{tikz}
@@ -7,20 +7,31 @@
 \renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
+
+\newcommand{\Title}{IrRubyConf 2015}
+\newcommand{\SubTitle}{Sponsorship proposal}
+
+
+
+
+
 \begin{document}
 
-\begin{tikzpicture}[remember picture,overlay]
+\begin{tikzpicture}[remember picture,overlay,shift={(current page.center)}]
 % draw image
 \node[inner sep=0] at (current page.center)
 {\includegraphics[width=\paperwidth,height=\paperheight]{cover.png}};
-\node[align=center] (node1) at (current page.center) {\fontsize{50}{50}\selectfont Sponsorship Proposal};
-\node[align=center, below to=node1] at (current page.center) {Proposal};
-
+\node[align=center] at (0,1.5) {\fontsize{50}{50}\selectfont \Title};
+\node[align=center] at (current page.center) {\Huge \SubTitle};
 \end{tikzpicture}
+
+\newpage
 \tableofcontents
-\mainmatter
-\chapter{A}
+\newpage
+
+
+\section*{Introduction}
 asd
-\chapter{B}
+\section*{B}
 zxc
 \end{document}
