@@ -1,13 +1,22 @@
 \documentclass[a4paper,12pt]{book}
-
-\usepackage{pdfpages}
+\usepackage[a4paper]{geometry}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{fix-cm}
+\usepackage[defaultsans]{droidsans}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
 
 \begin{document}
-\includepdf[fitpaper]{cover.png}
-asdasdasd
-\cleardoublepage
 
-\frontmatter
+\begin{tikzpicture}[remember picture,overlay]
+% draw image
+\node[inner sep=0] at (current page.center)
+{\includegraphics[width=\paperwidth,height=\paperheight]{cover.png}};
+\node[align=center] (node1) at (current page.center) {\fontsize{50}{50}\selectfont Sponsorship Proposal};
+\node[align=center, below to=node1] at (current page.center) {Proposal};
+
+\end{tikzpicture}
 \tableofcontents
 \mainmatter
 \chapter{A}
